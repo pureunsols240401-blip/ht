@@ -1,0 +1,59 @@
+<html class="5"></html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>나의 이야기 게임</title>
+</head>
+<body>
+
+<h1>나만의 텍스트 게임</h1>
+<button onclick="startGame()">게임 시작</button>
+
+<script>
+function startGame() {
+    var name = prompt("당신의 이름은?");
+    alert("환영합니다, " + name + "님!");
+
+    var path = prompt("당신은 어두운 길을 걷고 있습니다. 왼쪽 / 오른쪽 중 선택하세요");
+
+    if (path === "왼쪽") {
+        DOOR();
+    } else if (path === "오른쪽") {
+        meetMonster();
+    } else {
+        alert("당신은 길을 잃었습니다...");
+    }
+}
+
+function DOOR() {
+    var open = prompt("당신은 문을 찾았습니다.열겠습니까? (예/아니오)");
+    if (open === "예") {
+        alert("다른곳으로 이동되었습니다! 당신을 이곳을 떠돕니다.");
+    } else {
+        alert("문을 두고 그냥 지나쳤습니다.");
+    }
+}
+
+function meetMonster() {
+    var fight = prompt("괴물이 나타났습니다! 싸우시겠습니까? (예/아니오)");
+    if (fight === "예") {
+        alert("당신은 용감하게 싸웠고 이겼습니다!그러나 당신은 몸에 힘이 빠져나가는 것을 느낍니다.");
+    } else {
+        alert("당신은 도망쳤습니다...");
+    }
+}
+ var path = prompt("당신은 마을을 찾았습니다. . 자기 / 자고가지않기 중 선택하세요");
+
+    if (path === "자기") {
+        EXIT();
+    } else if (path === "자고가지않기") {
+        meetMonster();
+    } else {
+        alert("당신은 길을 잃었습니다...");
+    }
+    function EXIT() {alert ("일어나니 당신은 침대에 누워있습니다.")}
+</script>
+
+</body>
+</html>
